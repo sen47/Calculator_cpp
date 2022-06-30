@@ -23,6 +23,10 @@ std::string checkInput(const char* out, std::int16_t& lBrakets, std::int16_t& op
 		{
 			std::cout << "I think you forgot bracket, try again!\n";
 		}
+		else if (!isSpace(input))
+		{
+			std::cout << "I think you use space, try again!\n";
+		}
 		else if (input.empty())
 		{
 			std::cout << "I think you forgot print example, try again!\n";
@@ -69,4 +73,13 @@ bool isAllowedSymbols(const std::string example)
 			return false;
 	}
 	return true;
+}
+
+bool isSpace(const std::string example)
+{
+	for (const char el : example)
+	{
+		if (el == ' ')
+			return false;
+	}
 }

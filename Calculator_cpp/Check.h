@@ -1,3 +1,5 @@
+// *Many functions use cycle, unit it to one
+
 #pragma once
 
 #include<iostream>
@@ -14,3 +16,5 @@ bool isBracketsEquals(const std::string example, std::int16_t& lBrakets);
 bool isOperationsEquals(const std::string example, std::int16_t& operations);
 
 bool isAllowedSymbols(const std::string example);
+
+bool isSpace(const std::string example);
